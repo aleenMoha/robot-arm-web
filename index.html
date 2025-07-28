@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Robot Arm Control Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Robot Arm Control Panel</h2>
+
+  <div id="sliders">
+    <label>Motor 1: <input type="range" min="0" max="180" value="90" id="m1" oninput="updateValue(1)"> <span id="val1">90</span></label><br>
+    <label>Motor 2: <input type="range" min="0" max="180" value="90" id="m2" oninput="updateValue(2)"> <span id="val2">90</span></label><br>
+    <label>Motor 3: <input type="range" min="0" max="180" value="90" id="m3" oninput="updateValue(3)"> <span id="val3">90</span></label><br>
+    <label>Motor 4: <input type="range" min="0" max="180" value="90" id="m4" oninput="updateValue(4)"> <span id="val4">90</span></label><br>
+    <label>Motor 5: <input type="range" min="0" max="180" value="90" id="m5" oninput="updateValue(5)"> <span id="val5">90</span></label><br>
+    <label>Motor 6: <input type="range" min="0" max="180" value="90" id="m6" oninput="updateValue(6)"> <span id="val6">90</span></label><br>
+  </div>
+
+  <button onclick="reset()">Reset</button>
+  <button onclick="savePose()">Save Pose</button>
+  <button onclick="run()">Run</button>
+
+  <hr>
+
+  <h3>Saved Poses</h3>
+  <table border="1" id="poseTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Motor 1</th>
+        <th>Motor 2</th>
+        <th>Motor 3</th>
+        <th>Motor 4</th>
+        <th>Motor 5</th>
+        <th>Motor 6</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be populated using JS -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>

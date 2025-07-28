@@ -1,0 +1,7 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+}
+input[type=range] {
+  width: 200px;
+}
